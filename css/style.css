@@ -1,0 +1,18 @@
+/* Global layout */
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: thistle;
+    text-align: center;
+}
+nav {
+    background-color: #fff;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+/* Tablet layout (>320px <769px) */
+
+/* Desktop layout (>769px) */
