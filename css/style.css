@@ -1,18 +1,31 @@
+/* Fonts */
+body {
+    font-family: 'Truculenta', sans-serif;
+}
 /* Global layout */
 * {
     box-sizing: border-box;
 }
 body {
-    margin: -15px 0;
+    margin: 0;
     text-align: center;
+}
+.wrapper {
+    margin: auto 15px;
 }
 header, aside, footer {
     background-color: rgb(248, 248, 248);
     text-align: center;
 }
+/* header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+} */
 h1 {
     font-size: 20px;
     padding-top: 14px;
+    margin-top: 0;
 }
 ul {
     padding-inline-start: 0px;
@@ -20,7 +33,6 @@ ul {
 }
 ul li {
     display: block;
-    background-color: #fff;
     list-style: none;
     padding: 5px;
     margin: 3px 0;
@@ -62,6 +74,7 @@ h2 {
     font-size: 16px;
     font-weight: bold;
     padding-bottom: 2em;
+    padding-top: 1em;
 }
 h3 {
     padding-top: 0.5em;
@@ -74,7 +87,6 @@ section p {
     padding: 6px;
 }
 .address {
-    text-emphasis: none;
     font-style: normal;
 }
 em {
@@ -82,18 +94,77 @@ em {
     font-style: normal;
     font-weight: bold;
 }
+.container-bottom-nav-big {
+    display: none;
+}
 .container-bottom-nav {
     width: 100%;
 }
 .bottom-nav {
-    display: flex;
+    display: inline-block;
+    width: calc(48% - 10px);
     justify-content: space-around;
+    font-size: .9em;
+    font-weight: 700;
+    padding: 20px 5px;
+}
+.bottom-nav:first-child {
+    text-align: left;
+}
+.bottom-nav:last-child {
+    text-align: right;
+}
+#contact {
+    margin-top: 30px;
+    background-color: rgb(248, 248, 248);
+    border-bottom: .5px solid grey;
 }
 
-
 /* Tablet layout (>320px <769px) */
-@media screen and (min-width: 320px) {
-    
+@media screen and (min-width: 321px){
+    .nav {
+        display: inline;
+    }
+    .nav a {
+        display: inline;
+    }
+    aside {
+        width: 100%;
+        padding: 30px 30px 50px 30px;
+    }
+    .profile-img {
+        width: 40vw;
+        float: right;
+        padding-left: 30px;
+    }
+    .intro-text {
+        text-align: left;
+        padding: 20px 20px 20px 10px;
+    }
+    article {
+        display: inline-block;
+        width: calc(45% - 25px);
+        margin: 20px;
+    }
+    article img {
+        width: 100%;
+    }
+    section div {
+        display: block;
+    }
+    #contact p {
+        padding: 10px 190px;
+        text-align: center;
+    }
+    .address p {
+        margin: auto 0;
+    }
+    .address p:last-child {
+        margin-bottom: 10px;
+    }
+    .container-bottom-nav {
+        display: none;
+    }
 }
 
 /* Desktop layout (>769px) */
