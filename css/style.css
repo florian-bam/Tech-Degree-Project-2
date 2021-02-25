@@ -17,12 +17,8 @@ header, aside, footer {
     background-color: rgb(248, 248, 248);
     text-align: center;
 }
-/* header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-} */
 h1 {
+    font-family: 'Ballet', cursive;
     font-size: 20px;
     padding-top: 14px;
     margin-top: 0;
@@ -119,6 +115,10 @@ em {
     background-color: rgb(248, 248, 248);
     border-bottom: .5px solid grey;
 }
+footer {
+    padding: 10px 0 30px;
+}
+
 
 /* Tablet layout (>320px <769px) */
 @media screen and (min-width: 321px){
@@ -164,6 +164,32 @@ em {
     }
     .container-bottom-nav {
         display: none;
+    }
+    /* the annoying nav in the end  */
+    .container-bottom-nav-big {
+        display: inline-block;
+    }
+    .main-nav {
+        width: 100%;
+        min-height: 70px;
+        text-align: center;
+    }
+    .right-nav .name {
+        display: block;
+        margin-right: auto;
+    }
+    .name {
+        display: inline-block;
+        width: 60vw;
+        text-align: left;
+    }
+    .nav li {
+        padding: 5px 10px 10px 10px;
+    }
+    .right-nav {
+        display: inline-block;
+        margin-top: 7px;
+        margin-left: 10px;
     }
 }
 

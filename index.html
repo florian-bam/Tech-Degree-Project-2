@@ -3,11 +3,13 @@
     <head>
         <title>My mobile-first page</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ballet&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Truculenta:wght@400;700&display=swap" rel="stylesheet">  
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
@@ -81,14 +83,16 @@
         <footer>
             <nav class="container-bottom-nav">
                 <ul>
-                    <li class="bottom-nav">Florian</li>
+                    <li class="bottom-nav" style="font-family: 'Ballet', cursive;">Florian</li>
                     <li class="bottom-nav"><a href="#top">BACK TO TOP</a></li>
                 </ul>
             </nav>
-            <nav class="container-bottom-nav-big">
-              <ul>
-                  <li class="bottom-nav">Florian</li>
-                  <li class="bottom-nav"><a href="#top">BACK TO TOP</a></li>
+            <nav class="container-bottom-nav-big" class="main-nav">
+              <ul class="nav-bottom">
+                <li class="name" style="font-family: 'Ballet', cursive;">Florian</li>
+                <li class="right-nav"><a href="index.html">HOME</a></li>
+                <li class="right-nav"><a href="#portfolio">PORTFOLIO</a></li>
+                <li class="right-nav"><a href="#contact">CONTACT</a></li>
               </ul>
           </nav>
         </footer>
