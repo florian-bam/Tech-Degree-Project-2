@@ -1,6 +1,9 @@
 /* Fonts */
 body {
     font-family: 'Truculenta', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 /* Global layout */
 * {
@@ -23,15 +26,16 @@ h1 {
     padding-top: 14px;
     margin-top: 0;
 }
+ul {
+    padding: 0;
+    margin-bottom: -30px;
+}
 ul li {
     display: block;
     list-style: none;
     padding: 5px;
     margin: 3px 0;
     text-align: center;
-}
-.nav {
-    width: 85vw;
 }
 ul a {
     display: block;
@@ -40,17 +44,10 @@ ul a {
     color: black;
 }
 nav {
-    display: inline-block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: -20px;
+    margin-top: -30px;
 }
 .container {
     margin: 30px auto 10px auto;
-}
-aside {
-    margin-top: -5px;
-    padding: 20px 0;
 }
 img {
     width: 85vw;
@@ -85,12 +82,6 @@ em {
     font-style: normal;
     font-weight: bold;
 }
-#container-bottom-nav-big {
-    display: none;
-}
-#container-bottom-nav-big-top {
-    display: none;
-}
 .container-bottom-nav {
     width: 100%;
 }
@@ -116,20 +107,53 @@ em {
 footer {
     padding: 10px 0 30px;
 }
-.container-top-nav-big {
-    display: none;
+
+/* ==================================
+FLEX BOX START */
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+/* FLEX BOX END
+================================== */
 
 
 /* Tablet layout (>320px <769px) */
 @media screen and (min-width: 321px){
-    .nav {
-        display: inline;
+    .name {
+        align-self: center;
     }
-    .nav a {
-        display: inline;
+    .container {
+        display: flex;
+    }
+    .nav {
+        padding: 0 10px;
     }
     aside {
+        display: flex;
+        padding: 0 20px 20px;
+    }
+    aside img {
+        width: 35%;
+    }
+    aside p {
+        order: -1;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    section article {
+        flex: 1 40vw;
+    }
+    /* aside {
         width: 100%;
         padding: 30px 30px 50px 30px;
     }
@@ -163,10 +187,7 @@ footer {
     .address p:last-child {
         margin-bottom: 10px;
     }
-    .container-bottom-nav {
-        display: none;
-    }
-    /* the annoying nav in the end  */
+    the annoying nav in the end 
     #container-bottom-nav-big {
         display: inline-block;
     }
@@ -194,15 +215,12 @@ footer {
         display: inline-block;
         margin-top: 7px;
         margin-left: 10px;
-    }
+    } */
 }
 
 /* Desktop layout (>769px) */
 @media screen and (min-width: 1024px) {
     /* the annoying nav at the top  */
-    .containter-top-nav {
-        display: none;
-    }
     .container-top-nav-big {
         display: inline-block;
     }
