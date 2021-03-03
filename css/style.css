@@ -1,9 +1,6 @@
 /* Fonts */
 body {
     font-family: 'Truculenta', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 /* Global layout */
 * {
@@ -12,6 +9,12 @@ body {
 body {
     margin: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#container-bottom-nav-big {
+    margin-top: auto;
 }
 .wrapper {
     margin: auto 15px;
@@ -24,11 +27,7 @@ h1 {
     font-family: 'Ballet', cursive;
     font-size: 20px;
     padding-top: 14px;
-    margin-top: 0;
-}
-ul {
-    padding: 0;
-    margin-bottom: -30px;
+    margin: 0;
 }
 ul li {
     display: block;
@@ -43,21 +42,12 @@ ul a {
     text-decoration: none;
     color: black;
 }
-nav {
-    margin-top: -30px;
-}
-.container {
-    margin: 30px auto 10px auto;
-}
 img {
     width: 85vw;
     margin-top: 10px;
 }
 .profile-img {
     max-width: 60%;
-}
-section {
-    margin-top: 4em;
 }
 h2 {
     font-size: 16px;
@@ -104,10 +94,12 @@ em {
     background-color: rgb(248, 248, 248);
     border-bottom: .5px solid grey;
 }
-footer {
-    padding: 10px 0 30px;
+.bottom-nav2 {
+    display: none;
 }
-
+ul {
+    padding-left: 0;
+}
 /* ==================================
 FLEX BOX START */
 .main-header {
@@ -151,116 +143,54 @@ FLEX BOX START */
         flex-wrap: wrap;
     }
     section article {
-        flex: 1 40vw;
-    }
-    /* aside {
-        width: 100%;
-        padding: 30px 30px 50px 30px;
-    }
-    .profile-img {
-        width: 60vh;
-        float: right;
-        padding-left: 30px;
-    }
-    .intro-text {
-        text-align: left;
-        padding: 20px 20px 20px 10px;
-    }
-    article {
-        display: inline-block;
-        width: calc(45% - 25px);
-        margin: 20px;
+        flex: 1 30vw;
     }
     article img {
-        width: 100%;
+        max-width: 40vw;
     }
-    section div {
-        display: block;
+    footer {
+        padding: 10px 20px;
+        border-top: solid 1px black;
     }
-    #contact p {
-        padding: 10px 190px;
-        text-align: center;
+    .container-bottom-nav {
+        display: none;
     }
-    .address p {
-        margin: auto 0;
+    .bottom-nav2 {
+        display: flex;
     }
-    .address p:last-child {
-        margin-bottom: 10px;
+    .nav-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    the annoying nav in the end 
-    #container-bottom-nav-big {
-        display: inline-block;
-    }
-    #container-bottom-nav-big-top {
-        display: inline-block;
-    }
-    .main-nav {
-        width: 100%;
-        min-height: 70px;
-        text-align: center;
-    }
-    .right-nav .name {
-        display: block;
+    .name-bottom {
         margin-right: auto;
     }
-    .name {
-        display: inline-block;
-        width: 60vw;
-        text-align: left;
-    }
-    .nav li {
-        padding: 5px 10px 10px 10px;
-    }
-    .right-nav {
-        display: inline-block;
-        margin-top: 7px;
-        margin-left: 10px;
-    } */
 }
 
 /* Desktop layout (>769px) */
 @media screen and (min-width: 1024px) {
-    /* the annoying nav at the top  */
-    .container-top-nav-big {
-        display: inline-block;
+    .main-header {
+        display: flex;
+        flex-direction: row;
     }
-    .main-nav {
-        width: 100%;
-        min-height: 70px;
-        text-align: center;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    .right-nav .name-top {
-        display: block;
+    .name {
         margin-right: auto;
+        padding: 20px 20px 20px 40px;
     }
-    .name-top {
-        display: inline-block;
-        width: 60vw;
-        text-align: left;
-        font-size: 2em;
+    .container {
+        margin: 1em 0;
+        padding: 0 20px 0 0;
     }
-    .nav li {
-        padding: 5px 10px 10px 10px;
+    section article {
+        flex: 1 30vw;
     }
-    .right-nav {
-        display: inline-block;
-        margin-top: 7px;
-        margin-left: 10px;
-    }
-    header {
-        padding: 30px 0;
-    }
-    aside {
-        height: 50vh;
-    }
-    .profile-img {
-        width: 60vh;
-        float: right;
-        padding-left: 30px;
-    }
-    article {
-        display: inline-block;
-        width: calc(30% - 25px);
-        margin: 20px;
+    article img {
+        max-width: 30vw;
     }
 }
